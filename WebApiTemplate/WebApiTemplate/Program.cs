@@ -1,4 +1,5 @@
 using WebApiTemplate.Extensions;
+using Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,13 +13,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.ConfigureCors();
 
 var app = builder.Build();
+var logger = app.Services.GetRequiredService<ILoggerManager>();
+app.ConfigureExceptionMiddleware(logger);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseDeveloperExceptionPage();
 }
 else
 {
