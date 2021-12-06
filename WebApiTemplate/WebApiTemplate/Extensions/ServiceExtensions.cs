@@ -1,4 +1,7 @@
-﻿namespace WebApiTemplate.Extensions
+﻿using Contracts;
+using LoggerService;
+
+namespace WebApiTemplate.Extensions
 {
     public static class ServiceExtensions
     {
@@ -12,6 +15,9 @@
                     .AllowAnyHeader()
                 ); 
             });
+
+        public static void ConfigureLoggerService(this IServiceCollection services) =>
+            services.AddSingleton<ILoggerManager, LoggerManager>();
 
     }
 }
