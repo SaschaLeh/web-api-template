@@ -30,4 +30,5 @@ namespace WebApiTemplate.Controllers
             .ToArray();
         }
     }
+    [ServiceFilter(typeof(ControllerFilterExample))] [Route("api/[controller]")] [ApiController] public class TestController : ControllerBase {[HttpGet] [ServiceFilter(typeof(ActionFilterExample))] public IEnumerable<string> Get() { return new string[] { "example", "data" }; } }
 }
