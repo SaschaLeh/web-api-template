@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{039DD55A-B8C8-4D45-ADE1-0C41E4BED814}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{DF922C50-E4C6-41D0-988A-EE7336153325}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AA8C3F7A-783B-49EA-BD30-1E266BCBE583}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{039DD55A-B8C8-4D45-ADE1-0C41E4BED814}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{039DD55A-B8C8-4D45-ADE1-0C41E4BED814}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{039DD55A-B8C8-4D45-ADE1-0C41E4BED814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF922C50-E4C6-41D0-988A-EE7336153325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF922C50-E4C6-41D0-988A-EE7336153325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF922C50-E4C6-41D0-988A-EE7336153325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF922C50-E4C6-41D0-988A-EE7336153325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8C3F7A-783B-49EA-BD30-1E266BCBE583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8C3F7A-783B-49EA-BD30-1E266BCBE583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8C3F7A-783B-49EA-BD30-1E266BCBE583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8C3F7A-783B-49EA-BD30-1E266BCBE583}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

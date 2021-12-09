@@ -1,6 +1,7 @@
 using WebApiTemplate.Extensions;
 using WebApiTemplate.ActionFilters;
 using Contracts;
+using Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,14 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<ValidationFilterAttribute>();
 builder.Services.ConfigureCors();
 builder.Services.ConfigureLoggerService();
+builder.Services.ConfigureSqlContext(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
-
 
 var app = builder.Build();
 var logger = app.Services.GetRequiredService<ILoggerManager>();
@@ -40,4 +39,4 @@ app.UseCors("CorsPolicy");
 app.UseAuthorization();
 app.MapControllers();
 
-app.Run();
+app.MigrateDatabase().Run();
